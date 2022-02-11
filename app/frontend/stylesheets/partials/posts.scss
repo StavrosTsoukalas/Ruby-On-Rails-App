@@ -23,3 +23,21 @@
 .post-content {
   display: none;
 }
+
+.solid-color-mode, .border-color-mode {
+  .post-text {
+    text-align: center;
+  }
+}
+
+.solid-color-mode {
+  .post-text {
+    padding: 10px;
+    background-color: white;
+    border-radius: 25px;
+  }
+}
+
+.border-color-mode {
+  background-color: white;
+}
