@@ -10,6 +10,7 @@ import "channels"
 import "jquery"
 import '../js/bootstrap_js_files.js'
 import '../posts/style.js'
+import '../posts/modal.js'
 
 Rails.start()
 Turbolinks.start()
