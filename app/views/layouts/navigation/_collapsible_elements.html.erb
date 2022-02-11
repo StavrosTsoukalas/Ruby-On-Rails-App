@@ -1,0 +1,27 @@
+<div class="collapse navbar-collapse" id="navbar-collapsible-content">
+  <ul class="navbar-nav ms-auto">
+    <% if user_signed_in? %>
+      <li class="dropdown pc-menu">
+        <a id="user-settings" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">
+          <%= current_user.name %>
+        </a>
+
+        <ul class="dropdown-menu" aria-labelledby="user-settings">
+          <li><%= link_to 'Edit Profile', edit_user_registration_path %></li>
+          <li><%= link_to 'Log out', destroy_user_session_path, method: :delete %></li>
+        </ul>
+      </li>
+
+      <li class="nav-item dropdown mobile-menu">
+        <%= link_to 'Edit Profile', edit_user_registration_path %>
+      </li>
+      <li class="mobile-menu">
+        <%= link_to 'Log out', destroy_user_session_path, method: :delete %>
+      </li>
+
+    <% else # user not signed it %>
+      <li style="margin-right: 10px"><%= link_to 'Login', login_path %></li>
+      <li ><%= link_to 'Signup', signup_path %></li>
+    <% end # if user is signed it %>
+  </ul>
+</div>

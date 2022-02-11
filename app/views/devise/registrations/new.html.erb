@@ -3,7 +3,7 @@
     <h1>Get in touch with like-minded people</h1>
     <h3>Create, study, accomplish goals together</h3>
 
-    <div class="col-sm-offset-4 col-sm-4">
+    <div class="col-sm-offset-4 col-sm-4" style="margin-left: auto; margin-right: auto">
       <h3>Sign up <small>it's free!</small></h3> 
 
         <%= bootstrap_form_for(resource, 
@@ -22,7 +22,7 @@
           <%= f.password_field :password_confirmation, 
                        placeholder: 'password confirmation', 
                        class: 'form-control' %>
-          <%= f.submit 'Sign up', class: 'btn sign-up-button' %>
+          <%= f.submit 'Sign up', class: 'btn btn-primary' %>
         <% end %>
 		
     </div>

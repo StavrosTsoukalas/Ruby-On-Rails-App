@@ -1,4 +1,4 @@
-.navbar-default, .navbar-toggle:focus, .collapsed, button.navbar-toggle {
+.navbar-expand-lg, .navbar-toggler:focus, .collapsed, button.navbar-toggler {
   background: $navbarColor !important;
   border: none;
   a {
@@ -7,7 +7,6 @@
 }
 
 nav {
-  .navbar-header {
     width: 100%;
     button, .navbar-brand {
       transition: opacity 0.15s;
@@ -18,6 +17,56 @@ nav {
     button:hover, .navbar-brand:hover {
       opacity: 0.8;
     }
+}
+
+.navbar-brand{
+  font-size: 1.5rem;
+}
+
+body {
+ margin-top: 50px;
+}
+
+.pc-menu {
+  margin-right: 10px;
+}
+
+.mobile-menu {
+  i {
+    color: white;
+  }
+  ul {
+    padding: 0px;
+  }
+  a {
+    display: block;
+    padding: 10px 0px 10px 25px !important;
+  }
+  a:hover {
+    background: white !important;
+    color: black !important;
+    i {
+      color: black;
+    }
   }
 }
 
+.icon-bar {
+  background-color: white !important;
+}
+
+.active a {
+  background: $navbarColor !important;
+  border-bottom: solid 5px white;
+}
+
+.dropdown-toggle, .dropdown-menu {
+  background: $navbarColor !important;
+  border: none;
+  font-size: 1.5rem;
+}
+
+.dropdown-menu a:hover {
+  color: black !important;
+  background: white !important;
+}
