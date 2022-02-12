@@ -3,6 +3,12 @@
     <h1 class="page-title"><%= page_title %></h1>
     <%= render 'posts/branch/create_new_post', branch: branch %>
   </div>
+  
+  <div class="row">
+    <%= render  'posts/branch/search_form', 
+              branch: branch,
+              search_placeholder: search_placeholder %>
+  </div>
 
   <div class="row">
     <%= render 'posts/branch/categories', branch: branch %>
