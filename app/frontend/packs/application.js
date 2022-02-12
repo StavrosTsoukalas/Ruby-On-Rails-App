@@ -11,6 +11,7 @@ import "jquery"
 import '../js/bootstrap_js_files.js'
 import '../posts/style.js'
 import '../posts/modal.js'
+import '../posts/infinite_scroll.js'
 
 Rails.start()
 Turbolinks.start()
