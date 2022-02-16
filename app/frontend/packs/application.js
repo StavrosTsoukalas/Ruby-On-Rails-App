@@ -12,8 +12,8 @@ import '../js/bootstrap_js_files.js'
 import '../posts/style.js'
 import '../posts/modal.js'
 import '../posts/infinite_scroll.js'
-import './conversations/position_and_visibility.js'
-import './conversations/toggle_window.js'
+import '../js/conversations/position_and_visibility.js'
+import '../js/conversations/toggle_window.js'
 
 Rails.start()
 Turbolinks.start()
