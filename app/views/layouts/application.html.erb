@@ -3,6 +3,7 @@
   <head>
     <title>TestApp</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= Gon::Base.render_data %>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -15,5 +16,6 @@
   <body>
     <%= render 'layouts/navigation' %>
     <%= yield %>
+    <%= render 'layouts/application/private_conversations_windows' %>
   </body>
 </html>

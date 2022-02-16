@@ -1,0 +1,10 @@
+<div class="panel-heading conversation-heading">
+  <span class="contact-name-notif"><%= @recipient.name %></span>  
+</div>
+
+<%= link_to "X", 
+            close_private_conversation_path(conversation), 
+            class: 'close-conversation', 
+            title: 'Close', 
+            remote: true, 
+            method: :post %>
