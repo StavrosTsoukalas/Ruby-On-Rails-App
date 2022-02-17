@@ -1,6 +1,6 @@
 import consumer from "../consumer"
 
-consumer.subscriptions.create("Private::ConversationChannel", {
+consumer.private_conversation = consumer.subscriptions.create("Private::ConversationChannel", {
   connected() {
     console.log("test");
     // Called when the subscription is ready for use on the server
@@ -12,5 +12,18 @@ consumer.subscriptions.create("Private::ConversationChannel", {
 
   received(data) {
     // Called when there's incoming data on the websocket for this channel
+  },
+
+  send_message: function(message) {
+    return this.perform('send_message', {
+        message: message
+    });
   }
+});
+
+$(document).on('submit', '.send-private-message', function(e) {
+    e.preventDefault();
+    var values = $(this).serializeArray();
+    consumer.private_conversation.send_message(values);
+    $(this).trigger('reset');
 });
