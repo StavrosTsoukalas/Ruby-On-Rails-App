@@ -1,4 +1,5 @@
-<%= link_to 'Collab Field', root_path, class: 'navbar-brand' %>
-<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-collapsible-content" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-  <span class="navbar-toggler-icon"></span>
-</button>
+<div class="navbar-header">
+  <% nav_header_content_partials.each do |partial_path| %>
+    <%= render partial: partial_path %>
+  <% end %>
+</div>

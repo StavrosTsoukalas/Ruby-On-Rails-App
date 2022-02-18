@@ -20,6 +20,7 @@ Rails.application.routes.draw do
     resources :conversations, only: [:create] do
       member do
         post :close
+        post :open
       end
     end
     resources :messages, only: [:index, :create]
