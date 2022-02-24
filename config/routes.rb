@@ -25,5 +25,17 @@ Rails.application.routes.draw do
     end
     resources :messages, only: [:index, :create]
   end
+  
+  namespace :group do 
+    resources :conversations do
+      member do
+        post :close
+        post :open
+      end
+    end
+    resources :messages, only: [:index, :create]
+  end
+  
   resources :contacts, only: [:create, :update, :destroy]  
+
 end
