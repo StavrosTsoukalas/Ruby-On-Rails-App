@@ -24,5 +24,6 @@ Rails.application.routes.draw do
       end
     end
     resources :messages, only: [:index, :create]
-  end  
+  end
+  resources :contacts, only: [:create, :update, :destroy]  
 end
