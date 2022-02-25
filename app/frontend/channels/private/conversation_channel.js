@@ -81,7 +81,7 @@ $(document).on('click', '.conversation-window, .private-conversation', function(
         latest_message.removeClass('unseen');
         $('#menu-pc' + conv_id).removeClass('unseen-conv');
         calculateUnseenConversations();
-        App.private_conversation.set_as_seen(conv_id);
+        consumer.private_conversation.set_as_seen(conv_id);
     }
 });
 
