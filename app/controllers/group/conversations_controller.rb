@@ -26,6 +26,14 @@ class Group::ConversationsController < ApplicationController
       format.js
     end
   end
+
+  def update
+    Group::AddUserToConversationService.new({
+      conversation_id: params[:id],
+      new_user_id: params[:user][:id],
+      added_by_id: params[:added_by]
+    }).call
+  end
   
   private
 

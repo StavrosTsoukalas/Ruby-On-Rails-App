@@ -18,6 +18,7 @@ import '../js/conversations/toggle_window.js'
 import '../js/conversations/conversation.js'
 import '../channels/shared/conversation.js'
 import '../js/conversations/options.js'
+import '../channels/group/conversation_channel.js'
 
 Rails.start()
 Turbolinks.start()
