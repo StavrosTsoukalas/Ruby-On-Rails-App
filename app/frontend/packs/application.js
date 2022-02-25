@@ -19,6 +19,8 @@ import '../js/conversations/conversation.js'
 import '../channels/shared/conversation.js'
 import '../js/conversations/options.js'
 import '../channels/group/conversation_channel.js'
+import '../channels/notification_channel.js'
+import '../posts/contact_requests.js'
 
 Rails.start()
 Turbolinks.start()
