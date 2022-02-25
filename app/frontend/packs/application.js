@@ -16,6 +16,7 @@ import '../js/conversations/position_and_visibility.js'
 import '../js/conversations/toggle_window.js'
 import '../js/conversations/conversation.js'
 import '../channels/shared/conversation.js'
+import '../js/conversations/options.js'
 
 Rails.start()
 Turbolinks.start()

@@ -9,5 +9,5 @@
             remote: true, 
             method: :post %>
 <%= render add_to_contacts_partial_path(@contact) %>
-<%= render create_group_conv_partial_path, conversation: conversation %>
+<%= render create_group_conv_partial_path(@contact), conversation: conversation %>
 
