@@ -11,14 +11,14 @@ class ApplicationController < ActionController::Base
   def redirect_if_signed_in
     redirect_to root_path if user_signed_in?
   end
-  
+
   def opened_conversations_windows
     if user_signed_in?
       # opened conversations
       session[:private_conversations] ||= []
       session[:group_conversations] ||= []
       @private_conversations_windows = Private::Conversation.includes(:recipient, :messages)
-                                      .find(session[:private_conversations])
+                                         .find(session[:private_conversations])
       @group_conversations_windows = Group::Conversation.find(session[:group_conversations])
     else
       @private_conversations_windows = []
